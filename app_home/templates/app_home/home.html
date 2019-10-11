@@ -1,0 +1,26 @@
+{% extends 'app_home/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<img src="{% static 'app_home/img/sum_cet_logo.png' %}" height="250" class="mx-auto d-block">
+
+</br>
+
+<h4>Support Machines on Clustered Electric Transformers</h4>
+
+</br>
+
+<p>
+    Um modelo de manutenção de falha preditiva tem como principal objetivo minimizar os custos operacionais e
+    financeiros de um sistema, antecipando possíveis avarias quando tenta identificar, geralmente por modelos
+    probabilísticos, padrões recorrentes no histórico de ocorrência de falhas. Assim, visando otimizar o
+    funcionamento dos transformadores e reduzir os impactos causados por suas panes, duas abordagens diferentes de
+    predição de falhas foram implementadas com resultados satisfatórios alcançados. A abordagem 1 se baseia no
+    agrupamento de causas de falha para aplicação de um modelo de aprendizado supervisionado de classificação
+    utilizando Support Vector Machine (SVM) e a abordagem 2 utiliza os conceitos probabilísticos das cadeias de
+    Markov para realizar suas previsões.
+</p>
+
+{% endblock %}

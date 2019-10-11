@@ -1,0 +1,77 @@
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+p:hover {
+    border: 1px dashed gray;
+    border-radius: 10px;
+}
+
+p {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+#btn_load {
+    margin-top:10px;
+    background-color: #ff892e;
+    color: white;
+}
+
+.cluster_box {
+    cursor: move;
+}
+
+#cluster_1 {
+    background-color: #ff892e8f;
+    font-size:small;
+}
+
+#cluster_2 {
+    background-color: #4c11308f;
+    font-size:small;
+}
+
+#cluster_3 {
+    background-color: #6666668f;
+    font-size:small;
+}
+
+#cluster_4 {
+    background-color: #9900008f;
+    font-size:small;
+}
+
+#month_list {
+    text-align: center;
+    font-weight: bold;
+}
+
+.selected_month{
+    border: 1px solid #ff892e8f;
+    background: #ff892e8f;
+    padding: 10px;
+    border-radius: 50px;
+    width: 45px;
+}
+
+.not_selected_month{
+    border: 1px dashed #6666668f;
+    padding: 10px;
+    border-radius: 50px;
+    width: 45px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+    padding: 0;
+}
+
+#failure_cause_box {
+    font-size:small;
+}

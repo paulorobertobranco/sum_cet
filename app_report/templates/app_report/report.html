@@ -1,0 +1,33 @@
+{% extends 'app_home/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'app_report/css/report.css' %}"/>
+
+<div class="tab-content">
+        <div class="container tab-pane active"><br>
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <img id="cluster1" class="img-thumbnail" src="/static/app_report/img/cluster_{{selected_database}}.png" width="100%">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+
+{% endblock %}

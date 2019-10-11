@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{%  static 'app_home/img/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app_home/lib/bootstrap/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'app_home/css/home.css' %}"/>
+    <title>SUM • CET</title>
+</head>
+<body>
+    {% csrf_token %}
+    <!-- -------------------- TOP NAVBAR -------------------- -->
+
+    <nav id="top_nav_bar" class="navbar navbar-expand-sm navbar-dark fixed-top justify-content-center">
+
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <strong>SUM • CET</strong>
+        </a>
+
+    </nav>
+
+    <div class="container-fluid" id="container">
+
+            <div class="row">
+
+                <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            {% if active_link == 'home' %}
+                                <a class="nav-link main_tab active"  href="{% url 'home' %}"> <span><img src="{% static 'app_home/img/home_active.png' %}"/></span> &nbsp &nbsp INÍCIO</a>
+                            {% else %}
+                                <a class="nav-link main_tab"  href="{% url 'home' %}"> <span><img src="{% static 'app_home/img/home.png' %}"/></span> &nbsp &nbsp INÍCIO</a>
+                            {% endif %}
+                        </li>
+                        <li class="nav-item">
+                            {% if active_link == 'load' %}
+                                <a class="nav-link main_tab active"  href="{% url 'load_select' %}"> <span><img src="{% static 'app_home/img/load_active.png' %}"/></span> &nbsp &nbsp CARREGAR</a>
+                            {% else %}
+                                <a class="nav-link main_tab"  href="{% url 'load_select' %}"> <span><img src="{% static 'app_home/img/load.png' %}"/></span> &nbsp &nbsp CARREGAR</a>
+                            {% endif %}
+                        </li>
+
+                        <li class="nav-item">
+                            {% if active_link == 'add' %}
+                                <a class="nav-link main_tab active"  href="{% url 'add_select' %}"> <span><img src="{% static 'app_home/img/add_active.png' %}"/></span> &nbsp &nbsp ADICIONAR FALHA</a>
+                            {% else %}
+                                <a class="nav-link main_tab"  href="{% url 'add_select' %}"> <span><img src="{% static 'app_home/img/add.png' %}"/></span> &nbsp &nbsp ADICIONAR FALHA</a>
+                            {% endif %}
+                        </li>
+
+                        <li class="nav-item">
+                            {% if active_link == 'report' %}
+                                <a class="nav-link main_tab active"  href="{% url 'report_select' %}"> <span><img src="{% static 'app_home/img/report_active.png' %}"/></span> &nbsp &nbsp RELATÓRIO</a>
+                            {% else %}
+                                <a class="nav-link main_tab"  href="{% url 'report_select' %}">  <span><img src="{% static 'app_home/img/report.png' %}"/></span> &nbsp &nbsp RELATÓRIO</a>
+                            {% endif %}
+                        </li>
+
+                        <li class="nav-item">
+                            {% if active_link == 'prediction' %}
+                                <a class="nav-link main_tab active"  href="{% url 'report_select' %}">  <span><img src="{% static 'app_home/img/predict_active.png' %}"/></span> &nbsp &nbsp PREDIÇÃO</a>
+                            {% else %}
+                                <a class="nav-link main_tab"  href="{% url 'report_select' %}">  <span><img src="{% static 'app_home/img/predict.png' %}"/></span> &nbsp &nbsp PREDIÇÃO</a>
+                            {% endif %}
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <main id="background" class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+
+                    <!-- -------------------- TAB CONTAINER -------------------- -->
+
+                    <div class="tab-content">
+
+                        <!-- -------------------- ACTIVE TAB -------------------- -->
+
+                        <div class="container tab-pane active">
+                            {% block content %}
+                            {% endblock %}
+                        </div>
+
+                    </div>
+
+                </main>
+
+            </div>
+    </div>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'app_home/lib/jquery/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'app_home/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'app_home/js/home.js' %}"></script>
+
+</body>
+</html>

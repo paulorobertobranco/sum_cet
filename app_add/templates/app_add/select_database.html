@@ -1,0 +1,30 @@
+{% extends 'app_home/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<ul id="cluster_tab" class="nav nav-tabs">
+    <li class="nav-item">
+        <a id="tab_select_database" class="nav-link"><strong>1. SELECIONE O ARQUIVO</strong></a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div style="display:none;"  class="animate-bottom" id="loader"></div>
+
+    <div id="not_loader" class="container tab-pane active justify-content-center"><br>
+        <ul class="list-group">
+            {% for file in input_files %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a class="database_file" href="{% url 'show_database' file %}" name="{{file}}">
+                        {{file}}
+                    </a>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

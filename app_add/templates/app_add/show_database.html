@@ -1,0 +1,67 @@
+{% extends 'app_home/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'app_add/css/show_database.css' %}"/>
+
+<ul id="cluster_tab" class="nav nav-tabs">
+    <li class="nav-item">
+        <a id="tab_select_database" class="nav-link" ><strong>1. SELECIONE O ARQUIVO</strong></a>
+    </li>
+    <li class="nav-item">
+        <a id="tab_add_failure" class="nav-link" ><strong>2. ADICIONE OS DADOS DO NOVO REGISTRO DE FALHA</strong></a>
+    </li>
+</ul>
+
+<div class="tab-content">
+
+    <div style="display:none;"  class="animate-bottom" id="loader"></div>
+
+    <div id="not_loader" class="container tab-pane active justify-content-center"><br>
+        <form action="{% url 'add_failure' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="selected_file">Arquivo Selecionado:</label>
+                <input type="text" class="form-control" id="selected_file"  value="{{selected_file}}" name="selected_file" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Ano:</label>
+                <input type="number" class="form-control" id="year" value="{{last_year}}"  min="{{last_year}}" name="year">
+            </div>
+
+            <div class="form-group">
+                <label for="month">Mês:</label>
+                <input type="number" class="form-control" id="month" value="{{last_month}}" min="1" max="12" name="month">
+            </div>
+
+            <label for="causes">Causas de Falha:</label>
+            <select class="form-control" id="causes" name="cause">
+                {% for c in failure_causes %}
+                    <option>{{c}}</option>
+                {% endfor %}
+            </select>
+
+            <br/>
+
+            <div class="form-group">
+                <label for="transformer">Transformador:</label>
+                <input type="number" class="form-control" id="transformer" name="transformer" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fic">FIC:</label>
+                <input type="number" class="form-control" id="fic" name="fic" required>
+            </div>
+
+            <input id="btn_add" type="submit" class="btn float-right btn-circle" value="ADICIONAR">
+
+        </form>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}
