@@ -22,4 +22,5 @@ urlpatterns = [
     path('load/', include('app_load.urls')),
     path('add/', include('app_add.urls')),
     path('report/', include('app_report.urls')),
+    path('predict/', include('app_predict.urls')),
 ]

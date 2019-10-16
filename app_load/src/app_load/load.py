@@ -11,9 +11,9 @@ from sklearn.preprocessing import LabelEncoder
 import app_home.src.app_home.settings as settings
 from sklearn.cluster import AgglomerativeClustering
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 
 def list_input_files():

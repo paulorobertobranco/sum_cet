@@ -17,6 +17,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1Rk501srcPv3GXQB878ejf5bwiW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app_home/static/app_home/img" />
@@ -49,6 +50,9 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />

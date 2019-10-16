@@ -58,10 +58,10 @@
                         </li>
 
                         <li class="nav-item">
-                            {% if active_link == 'prediction' %}
-                                <a class="nav-link main_tab active"  href="{% url 'report_select' %}">  <span><img src="{% static 'app_home/img/predict_active.png' %}"/></span> &nbsp &nbsp PREDIÇÃO</a>
+                            {% if active_link == 'predict' %}
+                                <a class="nav-link main_tab active"  href="{% url 'predict_select' %}">  <span><img src="{% static 'app_home/img/predict_active.png' %}"/></span> &nbsp &nbsp PREDIÇÃO</a>
                             {% else %}
-                                <a class="nav-link main_tab"  href="{% url 'report_select' %}">  <span><img src="{% static 'app_home/img/predict.png' %}"/></span> &nbsp &nbsp PREDIÇÃO</a>
+                                <a class="nav-link main_tab"  href="{% url 'predict_select' %}">  <span><img src="{% static 'app_home/img/predict.png' %}"/></span> &nbsp &nbsp PREDIÇÃO</a>
                             {% endif %}
                         </li>
 

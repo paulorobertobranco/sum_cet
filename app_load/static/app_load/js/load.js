@@ -24,6 +24,13 @@ $(document).ready(function(){
 
     $('#btn_load').click(function(){
 
+
+//        TODO: finish cluster selection
+        console.log($('#drop_fc_box').find('p').length === 0);
+
+//        ################################################
+        return;
+
         $('#loader').css('display', 'block');
         $('#not_loader').css('display', 'none');
 
