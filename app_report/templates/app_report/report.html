@@ -19,9 +19,17 @@
                 </div>
 
                 <div class="col-sm-6">
-                    <div class="card">
+                    <div id="clusterre_modal" class="card">
                         <div class="card-body text-center">
-                            <img id="cluster1" class="img-thumbnail" src="/static/app_report/img/cluster_{{selected_database}}.png" width="100%">
+
+                            <img id="cluster1" class="img-thumbnail img_modal_content" src="/static/app_report/img/cluster_{{selected_database}}.png" width="100%" alt="Cluster">
+
+                            <div id="cluster_modal" class="img_modal">
+                                <span class="close">&times;</span>
+                                <img class="img_modal-content" id="img01">
+                                <div id="caption"></div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -29,5 +37,7 @@
             </div>
         </div>
 </div>
+
+<script src="{% static 'app_report/js/report.js' %}"></script>
 
 {% endblock %}

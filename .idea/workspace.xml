@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b8b0929-306d-4a65-8a59-99801153725a" name="Default Changelist" comment="" />
+    <list default="true" id="5b8b0929-306d-4a65-8a59-99801153725a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_load/src/app_load/load.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_load/src/app_load/load.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_load/static/app_load/js/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/app_load/static/app_load/js/load.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_load/templates/app_load/load.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_load/templates/app_load/load.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_load/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_load/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_report/static/app_report/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/app_report/static/app_report/css/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_report/templates/app_report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_report/templates/app_report/report.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +25,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Rk501srcPv3GXQB878ejf5bwiW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app_home/static/app_home/img" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -66,5 +81,16 @@
       <updated>1570198026977</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

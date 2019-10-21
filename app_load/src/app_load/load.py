@@ -402,7 +402,13 @@ def run_group_online_model(train, test, model_output):
     return pd.DataFrame(result)
 
 
-def run(database, train_size):
+def run(database, train_size, clusters=None):
+
+    if clusters:
+
+        # TODO: IMPLEMENT MANUAL CLUSTERING
+        print('NOT IMPLEMENTED')
+        return
 
     # DATABASE NAME
     name = database.split('.')[0]

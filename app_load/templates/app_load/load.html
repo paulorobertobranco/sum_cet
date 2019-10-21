@@ -63,7 +63,7 @@
                         <div class="card">
                             {% for cl in range_clusters %}
                             <h5 class="card-header">Cluster {{ cl }}</h5>
-                            <div id="cluster_{{ cl }}" class="card-body text-center cluster_box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            <div id="cluster_{{ cl }}" class="card-body text-center cluster_box cluster" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                             {% endfor %}
                         </div>
                     </div>
@@ -104,6 +104,7 @@
 <!-- JAVASCRIPT FILES -->
 <script src="{% static 'app_home/lib/jquery/jquery-3.4.1.min.js' %}"></script>
 <script src="{% static 'app_home/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'app_load/js/util.js' %}"></script>
 <script src="{% static 'app_load/js/load.js' %}"></script>
 
 {% endblock %}

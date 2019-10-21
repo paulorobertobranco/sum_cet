@@ -29,11 +29,17 @@ def load_features(request, database):
 
 
 def load(request):
-    database = request.POST['database_name']
-    auto_cluster = request.POST['auto_cluster']
-    train_size = int(request.POST['train_size'])
 
-    run(database, train_size)
+    auto_cluster = request.POST['auto_cluster'] in 'true'
+    database = request.POST['database_name']
+    train_size = int(request.POST['train_size'])
+    clusters = request.POST['clusters']
+
+    if auto_cluster:
+        run(database, train_size)
+    else:
+        print(auto_cluster)
+        run(database, train_size, clusters=clusters)
 
     return JsonResponse({'status': True})
 
