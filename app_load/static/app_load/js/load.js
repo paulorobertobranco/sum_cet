@@ -33,6 +33,7 @@ $(document).ready(function(){
         if(!auto_cluster) {
             if($('#drop_fc_box').find('p').length != 0) {
                 stopLoading();
+                showNotification('Por favor, selecione 1 cluster para cada causa de falha.');
                 return;
             } else {
                 $.each($('.cluster'), function(index, cluster){

@@ -75,3 +75,9 @@ hr {
 #failure_cause_box {
     font-size:small;
 }
+
+#notification {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}

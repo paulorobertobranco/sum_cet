@@ -17,6 +17,21 @@ function stopLoading() {
 
 
 /**
+* Show notification alert
+* @param  {String}  msg     Message to show on notification box.
+*/
+function showNotification(msg) {
+
+    $('#notification').html(msg);
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $('#notification').css('display', 'block');
+    $("#notification").fadeTo(2000, 1000).slideUp(1000, function() {
+        $("#notification").slideUp(1000);
+    });
+}
+
+
+/**
 * Allow droping failure causes on boxes
 * @param  {Event}   ev  Event.
 */
