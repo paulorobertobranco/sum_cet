@@ -21,7 +21,7 @@
         <ul class="list-group">
             {% for file in loaded_input_files %}
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <a class="database_file" href="{% url 'show_report' file %}">
+                    <a class="database_file" href="{% url 'show_predict' file %}">
                         <span><img src="{% static 'app_home/img/loaded.png' %}"/></span> {{file}}
                     </a>
                 </li>

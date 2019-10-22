@@ -8,36 +8,38 @@
 
 <div class="tab-content">
         <div class="container tab-pane active"><br>
+
             <div class="row">
 
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body text-center">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body text-center">
-
-                            <img id="cluster1" class="img-thumbnail img_modal_content" src="/static/app_report/img/cluster_{{selected_database}}.png" width="100%" alt="Cluster">
-
-                            <div id="cluster_modal" class="img_modal">
-                                <span class="close">&times;</span>
-                                <img class="img_modal-content" id="img01">
-                                <div id="caption"></div>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col header">
+                    <strong>Frequência de Falhas (FIC)</strong>
                 </div>
 
             </div>
+
+            <div class="row">
+
+                <div class="col">
+
+                        <div id="failure_plot"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+                </div>
+
+            </div>
+
         </div>
 </div>
 
+<script type="text/javascript">
+    var failures = {{ failures }};
+    var month_range = {{ month_range }};
+</script>
+
+
+<!-- JAVASCRIPT FILES -->
+<script src="{% static 'app_home/lib/jquery/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'app_home/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'app_home/lib/plotly/plotly.js' %}"></script>
 <script src="{% static 'app_report/js/report.js' %}"></script>
 
 {% endblock %}

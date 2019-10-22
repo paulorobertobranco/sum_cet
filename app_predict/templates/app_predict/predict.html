@@ -1,0 +1,31 @@
+{% extends 'app_home/base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'app_predict/css/predict.css' %}"/>
+
+<div class="tab-content">
+
+    <div style="display:none;"  class="animate-bottom" id="loader"></div>
+
+    <div id="not_loader" class="container tab-pane active justify-content-center"><br>
+
+        <div class="row header">
+            <div class="col colspan-4">
+                <strong>HISTÓRICO</strong>
+                </hr>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- JAVASCRIPT FILES -->
+<script src="{% static 'app_predict/js/predict.js' %}"></script>
+
+{% endblock %}
