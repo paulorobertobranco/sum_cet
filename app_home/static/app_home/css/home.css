@@ -12,6 +12,15 @@
 
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+    padding: 0;
+}
+
 nav {
     font-size: small;
     font-weight: bold;
@@ -91,8 +100,9 @@ a:hover {
 }
 
 #not_loader {
-    width:80%;
+    width:90%;
     border: 1px solid #ccc;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 50px;
+    padding-bottom: 30px;
 }

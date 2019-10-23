@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render
 from app_load.src.app_load.load import list_input_files
 from app_report.src.app_report.report import get_features
@@ -15,12 +16,16 @@ def report_home(request):
 
 
 def show_report(request, database):
-    date_from, date_until, failures, month_range = get_features(database)
-
+    len_db, len_tfs, causes, failures_by_causes, failures_by_month, month_range, clusters = get_features(database)
     data = {
         'active_link': 'report',
         'selected_database': database.split('.')[0],
-        'failures': failures,
+        'failures_by_month': failures_by_month,
+        'failures_by_cause': failures_by_causes,
+        'causes': json.dumps(causes),
+        'clusters': enumerate(clusters),
         'month_range': list(range(len(month_range))),
+        'database_size': len_db,
+        'tf_size': len_tfs,
     }
     return render(request, 'app_report/report.html', data)

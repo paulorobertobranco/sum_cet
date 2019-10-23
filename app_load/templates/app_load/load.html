@@ -21,23 +21,6 @@
 
     <div id="not_loader" class="container tab-pane active"><br>
 
-        <div class="card-horizontal">
-            <div class="img-square-wrapper">
-                <img class="" src="{% static 'app_home/img/t1.png' %}" style="width:100%">
-            </div>
-            <div class="card-body">
-                <h5 id="database_name" class="card-header" >{{selected_database}}</h5>
-                <div class="card-text">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> Qtde. de registros: <strong> {{ database_size }} </strong> </li>
-                        <li class="list-group-item"> Qtde. de transformadores: <strong> {{ tf_size }} </strong> </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <hr/>
-
         <div class="form-check">
             <label class="form-check-label">
                 <input id="chkbx_auto_cluster" type="checkbox" class="form-check-input" value="" checked>Clusterização Automática

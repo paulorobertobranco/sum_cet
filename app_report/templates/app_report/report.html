@@ -7,32 +7,103 @@
 <link rel="stylesheet" type="text/css" href="{% static 'app_report/css/report.css' %}"/>
 
 <div class="tab-content">
-        <div class="container tab-pane active"><br>
 
-            <div class="row">
+    <div style="display:none;"  class="animate-bottom" id="loader"></div>
 
-                <div class="col header">
-                    <strong>Frequência de Falhas (FIC)</strong>
-                </div>
+    <div id="not_loader" class="container tab-pane active justify-content-center"><br>
+
+        <div class="row">
+
+            <div class="col colspan-2">
+
+                <p class="header">ESTATÍSTICAS</p>
 
             </div>
+        </div>
 
-            <div class="row">
+        <div class="row">
 
-                <div class="col">
-
-                        <div id="failure_plot"><!-- Plotly chart will be drawn inside this DIV --></div>
-
+            <div class="col">
+                 <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                        <img class="" src="{% static 'app_home/img/t1.png' %}" style="width:100%">
+                    </div>
+                    <div class="card-body">
+                        <h5 id="database_name" class="card-header" >{{selected_database}}</h5>
+                        <div class="card-text">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"> Qtde. de registros: <strong> {{ database_size }} </strong> </li>
+                                <li class="list-group-item"> Qtde. de transformadores: <strong> {{ tf_size }} </strong> </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
         </div>
+
+        <div class="row">
+
+            <div class="col">
+                    <p class="subheader"> Frequência de Falhas (FIC) por Mês</p>
+                    <div class="graph" id="failure_by_month_plot"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+            </div>
+
+
+            <div class="col">
+                    <p class="subheader"> Frequência de Falhas (FIC) por Causa </p>
+                    <div class="graph" id="failure_by_cause_plot"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col colspan-2">
+
+                <p class="header">CLUSTERIZAÇÃO</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            {% for index, c in clusters %}
+
+            <div class="col">
+                <p class="subheader"> Cluster {{index|add:1}} </p>
+                <p class="failure_cause">{{c}}</p>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="row">
+
+            <div class="col colspan-2">
+
+                <p class="header">VALIDAÇÃO</p>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+        </div>
+
+    </div>
 </div>
 
 <script type="text/javascript">
-    var failures = {{ failures }};
-    var month_range = {{ month_range }};
+    var causes = {{causes|safe}};
+    var failures_by_causes = {{failures_by_cause}};
+    var failures_by_month = {{failures_by_month}};
+    var month_range = {{month_range}};
+
 </script>
 
 
