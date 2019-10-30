@@ -45,15 +45,16 @@
 
         <div class="row">
 
-            <div class="col">
+            <div class="col colspan-2">
                     <p class="subheader"> Frequência de Falhas (FIC) por Mês</p>
                     <div class="graph" id="failure_by_month_plot"><!-- Plotly chart will be drawn inside this DIV --></div>
 
             </div>
+        </div>
+        <div class="row">
 
-
-            <div class="col">
-                    <p class="subheader"> Frequência de Falhas (FIC) por Causa </p>
+            <div class="col colspan-2">
+                    <p class="subheader"> Frequência de Falhas (FIC) </p>
                     <div class="graph" id="failure_by_cause_plot"><!-- Plotly chart will be drawn inside this DIV --></div>
 
             </div>
@@ -99,11 +100,9 @@
 </div>
 
 <script type="text/javascript">
-    var causes = {{causes|safe}};
-    var failures_by_causes = {{failures_by_cause}};
     var failures_by_month = {{failures_by_month}};
     var month_range = {{month_range}};
-
+    var failures_plot = {{failures_plot|safe}};
 </script>
 
 

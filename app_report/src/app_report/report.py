@@ -26,12 +26,35 @@ def get_failure_plot_data(database):
     causes = list(df.groupby(by=settings.COLUMN_CAUSE).sum()[settings.COLUMN_FIC].index)
     failures_by_causes = list(df.groupby(by=settings.COLUMN_CAUSE).sum()[settings.COLUMN_FIC])
 
-    return causes, failures_by_causes, failures_by_month
+    months = list(df.groupby(by=settings.COLUMN_MONTH).sum()[settings.COLUMN_FIC].index)
+    failures_by_months = list(df.groupby(by=settings.COLUMN_MONTH).sum()[settings.COLUMN_FIC])
+
+    substations = list(df.groupby(by=settings.COLUMN_SUBSTATION).sum()[settings.COLUMN_FIC].index)
+    failures_by_substation = list(df.groupby(by=settings.COLUMN_SUBSTATION).sum()[settings.COLUMN_FIC])
+
+    features = {
+        'causes': {
+            'x': causes,
+            'y': failures_by_causes,
+        },
+        'months': {
+            'x': months,
+            'y': failures_by_months,
+
+        },
+        'substations': {
+            'x': substations,
+            'y': failures_by_substation,
+
+        }
+
+    }
+
+    return failures_by_month, features
 
 
 def get_validation_plot_data(database):
     df, clusters = read_validation_df(database)
-    print(df['cluster'][0])
     return clusters
 
 
@@ -43,6 +66,6 @@ def get_features(database):
     date_from = f'{month_range[0]}-{start_year}'
     date_until = f'{month_range[-1]}-{end_year}'
 
-    causes, failures_by_causes, failures_by_month = get_failure_plot_data(database)
+    failures_by_month, failures_plot = get_failure_plot_data(database)
 
-    return len_db, len_tfs, causes, failures_by_causes, failures_by_month, month_range, clusters
+    return len_db, len_tfs, failures_by_month, failures_plot, month_range, clusters

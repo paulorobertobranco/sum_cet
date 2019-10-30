@@ -16,13 +16,12 @@ def report_home(request):
 
 
 def show_report(request, database):
-    len_db, len_tfs, causes, failures_by_causes, failures_by_month, month_range, clusters = get_features(database)
+    len_db, len_tfs, failures_by_month, failures_plot, month_range, clusters = get_features(database)
     data = {
         'active_link': 'report',
         'selected_database': database.split('.')[0],
         'failures_by_month': failures_by_month,
-        'failures_by_cause': failures_by_causes,
-        'causes': json.dumps(causes),
+        'failures_plot': json.dumps(failures_plot),
         'clusters': enumerate(clusters),
         'month_range': list(range(len(month_range))),
         'database_size': len_db,
