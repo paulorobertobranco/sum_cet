@@ -21,6 +21,13 @@
 
     <div id="not_loader" class="container tab-pane active"><br>
 
+        <div class="form-group">
+            <label for="database_name">Arquivo selecionado:</label>
+            <input value="{{selected_database}}" type="email" class="form-control" id="database_name" disabled>
+        </div>
+
+        <hr/>
+
         <div class="form-check">
             <label class="form-check-label">
                 <input id="chkbx_auto_cluster" type="checkbox" class="form-check-input" value="" checked>Clusterização Automática
@@ -77,12 +84,11 @@
 
         </div>
 
-        <hr/>
-
         <button type="button" id="btn_load" class="btn float-right btn-circle" data-url="{% url 'run_load' %}"> >> </button>
         <div id="notification" class="alert alert-danger" style="display: none;">
         </div>
     </div>
+
 </div>
 
 <!-- JAVASCRIPT FILES -->

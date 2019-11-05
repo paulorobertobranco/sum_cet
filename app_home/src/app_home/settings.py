@@ -8,7 +8,7 @@ PLOT_PATH = RESULT_PATH + '/plots/'
 MODEL_PATH = RESULT_PATH + '/model/'
 
 DAT_FILE = DAT_PATH + '{}.dat'
-PLOT_FILE = PLOT_PATH + 'cluster_{}.png'
+CLUSTER_FILE = CLUSTER_PATH + 'cluster_{}.dat'
 MODEL_FILE = MODEL_PATH + 'model_{}_cluster_{}.dat'
 VALIDATION_FILE = VALIDATION_PATH + 'validation_{}.csv'
 

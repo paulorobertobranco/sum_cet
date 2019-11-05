@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="{%  static 'app_home/img/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app_home/lib/bootstrap/css/bootstrap.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'app_home/css/home.css' %}"/>
-    <title>SUM • CET</title>
+    <title>SuMCET [{{active_link}}]</title>
 </head>
 <body>
     {% csrf_token %}
@@ -15,7 +15,7 @@
     <nav id="top_nav_bar" class="navbar navbar-expand-sm navbar-dark fixed-top justify-content-center">
 
         <a class="navbar-brand" href="{% url 'home' %}">
-            <strong>SUM • CET</strong>
+            <strong>SuMCET</strong>
         </a>
 
     </nav>

@@ -223,41 +223,15 @@ def get_clusters(correlation_df, output, pca_comp=2, n_clusters=3):
     pca_plot = pd.DataFrame(np.column_stack((pca, kl.astype(int))))
     pca_plot.iloc[:, -1] = pca_plot.iloc[:, -1].astype(int)
 
-    if pca_comp == 2:
-        fig, ax = plt.subplots()
-    else:
-        fig = plt.figure()
-        ax = fig.add_subplot(111, projection='3d')
+    open(output, 'wb').write(pickle.dumps(pca_df))
 
-    for c in sorted(pca_plot.iloc[:, -1].unique()):
-
-        if pca_comp == 2:
-            ax.scatter(pca_plot[pca_plot.iloc[:, -1] == c][0], pca_plot[pca_plot.iloc[:, -1] == c][1],
-                       label='cluster ' + str(c + 1) + ' (' + str(len(pca_plot[pca_plot.iloc[:, -1] == c])) + ')')
-        else:
-            ax.scatter(pca_plot[pca_plot.iloc[:, -1] == c][0], pca_plot[pca_plot.iloc[:, -1] == c][1],
-                       pca_plot[pca_plot.iloc[:, -1] == c][2],
-                       label='cluster ' + str(c + 1) + ' (' + str(len(pca_plot[pca_plot.iloc[:, -1] == c])) + ')')
-    ax.grid(True)
-    ax.legend(loc='best', markerscale=.5)
-    ax.set_xlabel('pca component 1 ({:.2f})'.format(pca_fit.explained_variance_ratio_[0]))
-    ax.set_ylabel('pca component 2 ({:.2f})'.format(pca_fit.explained_variance_ratio_[1]))
-    if pca_comp == 3:
-        ax.set_zlabel('pca component 3 ({:.2f})'.format(pca_fit.explained_variance_ratio_[2]))
-
-    plt.savefig(output, dpi=300)
-    plt.close()
-
-    return pca_df, cls
+    return cls
 
 
 def get_balanced_train_test(df, clusters, month_range, start_year, train_size):
 
     cluster_train = []
     cluster_test = []
-
-    print('TRAIN MONTHS: ' + str(month_range[2:train_size]))
-    print('TEST MONTHS: ' + str(month_range[train_size:-3]))
 
     test_size = len(month_range[train_size:-3])
 
@@ -406,19 +380,18 @@ def run(database, train_size, clusters=None):
 
     if clusters:
 
-        # TODO: IMPLEMENT MANUAL CLUSTERING
+        # TODO: IMPLEMENT MANUAL CLUSTERING'
         print('NOT IMPLEMENTED')
-        return
 
     # DATABASE NAME
     name = database.split('.')[0]
 
-    # CREATING DIRs
-    mkdir(settings.RESULT_PATH.format(name))
-    mkdir(settings.DAT_PATH.format(name))
-    mkdir(settings.VALIDATION_PATH.format(name))
-    mkdir(settings.PLOT_PATH.format(name))
-    mkdir(settings.MODEL_PATH.format(name))
+    # # CREATING DIRs
+    # mkdir(settings.RESULT_PATH.format(name))
+    # mkdir(settings.DAT_PATH.format(name))
+    # mkdir(settings.VALIDATION_PATH.format(name))
+    # mkdir(settings.MODEL_PATH.format(name))
+    # mkdir(settings.CLUSTER_PATH.format(name))
 
     # READING DATA
     df, cause_encoder, substation_encoder = read_df(database)
@@ -426,14 +399,14 @@ def run(database, train_size, clusters=None):
 
     # COMPUTING FEATURES
     dat_file = settings.DAT_FILE.format(name, name)
-    dat_df = save_dat_file(df, dat_file, start_year, month_range)
-    # dat_df = pickle.loads(open(dat_file, 'rb').read())
+    # dat_df = save_dat_file(df, dat_file, start_year, month_range)
+    dat_df = pickle.loads(open(dat_file, 'rb').read())
 
     # CLUSTERIZATION
     dat_df_train = get_train_dat_file(dat_df, train_size)
     correlations = get_correlations(dat_df_train)
-    cluster_plot_file = settings.PLOT_FILE.format(name, name)
-    _, cls = get_clusters(correlations, cluster_plot_file)
+    cluster_plot_file = settings.CLUSTER_FILE.format(name, name)
+    cls = get_clusters(correlations, cluster_plot_file)
 
     # COMPUTING FEATURES FOR CLUSTERIZED DATA
     train, test = get_balanced_train_test(df, cls, month_range, start_year, train_size)

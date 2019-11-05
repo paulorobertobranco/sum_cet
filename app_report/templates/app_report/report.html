@@ -43,6 +43,7 @@
 
         </div>
 
+
         <div class="row">
 
             <div class="col colspan-2">
@@ -51,6 +52,7 @@
 
             </div>
         </div>
+
         <div class="row">
 
             <div class="col colspan-2">
@@ -86,20 +88,33 @@
         <div class="row">
 
             <div class="col colspan-2">
+                    <p class="subheader"> Gráfico de Clusters </p>
+                    <div class="graph" id="cluster_plot"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col colspan-2">
 
                 <p class="header">VALIDAÇÃO</p>
 
             </div>
         </div>
 
-        <div class="row">
-
-        </div>
 
     </div>
 </div>
 
 <script type="text/javascript">
+    var cl1_plot_x = {{cl1_plot_x|safe}};
+    var cl1_plot_y = {{cl1_plot_y|safe}};
+    var cl2_plot_x = {{cl2_plot_x|safe}};
+    var cl2_plot_y = {{cl2_plot_y|safe}};
+    var cl3_plot_x = {{cl3_plot_x|safe}};
+    var cl3_plot_y = {{cl3_plot_y|safe}};
     var failures_by_month = {{failures_by_month}};
     var month_range = {{month_range}};
     var failures_plot = {{failures_plot|safe}};

@@ -45,7 +45,7 @@ $(document).ready(function(){
         var data = {
             'auto_cluster': auto_cluster,
             'train_size': $('#train_size').val(),
-            'database_name': $('#database_name').html(),
+            'database_name': $('#database_name').val(),
             'clusters': JSON.stringify(cl),
         };
 
