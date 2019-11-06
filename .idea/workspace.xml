@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b8b0929-306d-4a65-8a59-99801153725a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_home/src/app_home/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_home/src/app_home/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_home/static/app_home/img/sum_cet_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app_home/static/app_home/img/sum_cet_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_home/templates/app_home/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_home/templates/app_home/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_home/templates/app_home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_home/templates/app_home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_load/src/app_load/load.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_load/src/app_load/load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_load/static/app_load/js/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/app_load/static/app_load/js/load.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_load/templates/app_load/load.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_load/templates/app_load/load.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_report/src/app_report/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_report/src/app_report/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_report/static/app_report/css/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/app_report/static/app_report/css/report.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_report/static/app_report/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/app_report/static/app_report/js/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_report/templates/app_report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/app_report/templates/app_report/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_report/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_report/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processed_files/cleaned_database_3/model/model_cleaned_database_3_cluster_0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/processed_files/cleaned_database_3/model/model_cleaned_database_3_cluster_0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processed_files/cleaned_database_3/model/model_cleaned_database_3_cluster_1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/processed_files/cleaned_database_3/model/model_cleaned_database_3_cluster_1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processed_files/cleaned_database_3/model/model_cleaned_database_3_cluster_2.dat" beforeDir="false" afterPath="$PROJECT_DIR$/processed_files/cleaned_database_3/model/model_cleaned_database_3_cluster_2.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processed_files/cleaned_database_3/plots/cluster_cleaned_database_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/processed_files/cleaned_database_3/validation/validation_cleaned_database_3.csv" beforeDir="false" />
-    </list>
+    <list default="true" id="5b8b0929-306d-4a65-8a59-99801153725a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
